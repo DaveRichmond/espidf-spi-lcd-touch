@@ -169,6 +169,7 @@ static void example_lvgl_touch_cb(lv_indev_drv_t * drv, lv_indev_data_t * data)
         int x = touchpad_x[0];
         int y = touchpad_y[0];
     #else
+        // attempt to provide a basic autocal function
         static int min_x = INT_MAX, max_x = -INT_MAX, min_y = INT_MAX, max_y = -INT_MAX;
         int x = touchpad_x[0];
         min_x = min(x, min_x);
